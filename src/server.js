@@ -7,6 +7,7 @@ const { userRouter } = require("./models/user.routes");
 
 app.use(cors());
 app.use(express.json());
+app.use(userRouter);
 
 app.listen(port, () => {
   console.log(`Server listening on ${port}`);
