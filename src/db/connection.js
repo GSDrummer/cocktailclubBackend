@@ -10,7 +10,6 @@ const connection = async () => {
       useFindAndModify: false,
       useCreateIndex: true,
     });
-    console.log("WAHEY");
   } catch (error) {
     console.log(error);
   }
