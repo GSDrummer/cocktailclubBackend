@@ -12,7 +12,10 @@ exports.addUser = async (req, res) => {
 
 exports.loginUser = async (req, res) => {
   try {
-    const user = User.findByCredentials(req.body.username, req.body.password);
+    const user = await User.findByCredentials(
+      req.body.username,
+      req.body.password
+    );
     res.status(200).send({ status: "OK", user });
   } catch (error) {
     res.status(400).send({ message: "unable to log in" });
