@@ -18,7 +18,8 @@ const userSchema = new mongoose.Schema({
   },
   favourites: {
     type: Array,
-    required: false,
+    required: true,
+    default: [],
   },
 });
 
